@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Navbar from './components/Navbar/Navbar';
+import NavItem from './components/Navbar/NavItem/NavItem';
+import { ReactComponent as LogoIcon } from "./icons/logo.svg"
+import { BrowserRouter as Router } from 'react-router-dom';
+import DropdownMenu from './components/Navbar/DropdownMenu/DropdownMenu';
+import DropdownItem from './components/Navbar/DropdownItem/DropdownItem';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar>
+        {/* <NavItem icon={<LogoIcon />}>
+          <DropdownMenu >
+            <DropdownItem leftIcon={<LogoIcon />} description="hi" />
+          </DropdownMenu>
+        </NavItem>
+        <NavItem icon="🚢" />
+        <NavItem icon="🚢" /> */}
+      </Navbar>
+    </Router>
   );
 }
 

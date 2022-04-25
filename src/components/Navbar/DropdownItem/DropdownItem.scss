@@ -1,0 +1,18 @@
+.dd-description{
+    background-color: white;
+}
+.dropdown-item{
+    height:50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: background 300ms;
+    padding: 0.5rem;
+}
+.icon-right{
+    margin-left:auto;
+}
+
+.dropdown-item:hover{
+    background-color: #525357;
+}
