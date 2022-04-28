@@ -10,4 +10,45 @@
     border-radius:10px;
     padding:1rem;
     overflow:hidden;
+
+    transition: height $nav-speed ease;
+}
+
+.nav-menu-primary-enter{
+    position:absolute;
+    transform: translateX(-110%)
+}
+
+.nav-menu-primary-enter-active{
+    transform: translateX(0%);
+    transition: all $nav-speed ease;
+
+}
+
+.nav-menu-primary-exit{
+    position: absolute;
+}
+.nav-menu-primary-exit-active{
+    transform: translateX(-110%);
+    transition: all $nav-speed ease;
+}
+
+
+.nav-menu-secondary-enter{
+    position:absolute;
+    transform: translateX(110%)
+}
+
+.nav-menu-secondary-enter-active{
+    transform: translateX(0%);
+    transition: all $nav-speed ease;
+
+}
+
+.nav-menu-secondary-exit{
+    position: absolute;
+}
+.nav-menu-secondary-exit-active{
+    transform: translateX(110%);
+    transition: all $nav-speed ease;
 }

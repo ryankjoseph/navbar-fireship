@@ -1,5 +1,11 @@
+@import '../navVariables';
 .dd-description{
     background-color: white;
+}
+.open-secondary{
+    cursor:alias;
+    color:$nav-text-color;
+
 }
 .dropdown-item{
     height:50px;
