@@ -14,21 +14,21 @@ function Navbar(props) {
                 leftIcon: <LogoIcon />,
                 description: "first item",
                 rightIcon: null,
-                advanced: false,
-                link:"/about"
+                secondary: false,
+                link: "/about1"
             },
             {
                 leftIcon: <LogoIcon />,
                 description: "second item",
                 rightIcon: null,
-                advanced: false,
-                link:"/about"
+                secondary: false,
+                link: "/about11"
             }, {
                 leftIcon: <LogoIcon />,
                 description: "third item",
                 rightIcon: <LogoIcon />,
-                advanced: false,
-                link:"/about"
+                secondary: false,
+                link: "/about12"
             }]
 
         },
@@ -37,6 +37,44 @@ function Navbar(props) {
             icon: <LogoIcon />,
             description: 'sometext',
             dropdown: null,
+
+        },
+        {
+            link: null,
+            icon: <LogoIcon />,
+            description: 'sometext',
+            dropdown: [{
+                leftIcon: <LogoIcon />,
+                description: "first item 1",
+                rightIcon: null,
+                link: "/about3",
+                secondary: [{
+                    leftIcon: <LogoIcon />,
+                    description: "first primary item",
+                    rightIcon: null,
+                    link: "/aboot",
+                },
+                {
+                    leftIcon: <LogoIcon />,
+                    description: "second secondary item",
+                    rightIcon: null,
+                    link: "/aboot2",
+                },
+            ],
+            },
+            {
+                leftIcon: <LogoIcon />,
+                description: "second item",
+                rightIcon: null,
+                secondary: false,
+                link: "/about31"
+            }, {
+                leftIcon: <LogoIcon />,
+                description: "third item",
+                rightIcon: <LogoIcon />,
+                secondary: false,
+                link: "/about32"
+            }]
 
         },
 
@@ -51,7 +89,7 @@ function Navbar(props) {
                         if (x.dropdown) {
                             return (<NavItem key={i} link={x.link} description={x.description} icon={x.icon}>
 
-                                <DropdownMenu key={i} dropdown={x.dropdown} />
+                                <DropdownMenu description = {x.description} key={i} dropdown={x.dropdown} />
                             </NavItem>)
                         }
                         else {
