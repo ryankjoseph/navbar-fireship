@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState } from 'react'
 import './Navbar.scss'
 import NavItem from './NavItem/NavItem'
 import { ReactComponent as LogoIcon } from '../../icons/logo.svg'
@@ -79,23 +79,22 @@ function Navbar(props) {
         },
 
     ]
-
+    //attempt at closing other nav items
+    const [dropdownDisplay, setDropdownDisplay] = useState('working');
     return (
         <nav className='navbar'>
             <ul className="navbar-list">
-
                 {
                     navList.map(function (x, i) {
                         if (x.dropdown) {
-                            return (<NavItem key={i} link={x.link} description={x.description} icon={x.icon}>
-
-                                <DropdownMenu description = {x.description} key={i} dropdown={x.dropdown} />
+                            return (
+                            <NavItem dropdownDisplay= {dropdownDisplay} setDropdownDisplay={setDropdownDisplay} key={i} link={x.link} description={x.description} icon={x.icon}>
+                                <DropdownMenu dropdownDisplay= {dropdownDisplay} setDropdownDisplay={setDropdownDisplay} description = {x.description} key={i} dropdown={x.dropdown} />
                             </NavItem>)
                         }
                         else {
                             return (
                                 <NavItem link={x.link} description={x.description} icon={x.icon}>
-                                    BOB
                                 </NavItem>
                             )
 
